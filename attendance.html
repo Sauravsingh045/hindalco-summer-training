@@ -1,0 +1,83 @@
+<html>
+
+<head>
+    <title>
+        Mark attendance
+    </title>
+    <script src="script.js"></script>
+    <style>
+        body {
+            background-image: url('bg.png');
+        }
+    </style>
+</head>
+
+<body>
+
+    <script src="html5-qrcode.min.js"></script>
+    <script src="script.js"></script>
+    <style>
+        .result {
+            background-color: green;
+            color: #fff;
+            padding: 20px;
+        }
+
+        .row {
+            padding: auto;
+            color: #E8AA42;
+            padding-top: 10%;
+            padding-left: 10%;
+            display: flex;
+        }
+    </style>
+
+
+    <div class="row">
+        <div class="col">
+            <div style="width:500px;" id="reader"></div>
+        </div>
+        <div class="col" style="padding:30px;">
+            <h2>attendance marked!</h2>
+            <div id="result">
+                <h2> mark your attendance!!!</h2>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript">
+        function onScanSuccess(qrCodeMessage) {
+            document.getElementById('result').innerHTML = '<span class="result">' + qrCodeMessage + '</span>';
+            alert("Your attendance is marked succsessfully!!!")
+
+
+        }
+
+        function onScanError(errorMessage) {
+            //handle scan error
+        }
+
+
+        var html5QrcodeScanner = new Html5QrcodeScanner(
+            "reader", { fps: 10, qrbox: 250 });
+        html5QrcodeScanner.render(onScanSuccess, onScanError);
+
+
+
+    </script>
+    <br>
+    <a href="qrcodegenerator.html">
+        <i>create Qr Code (if doesn't Have!!!)</i>
+    </a>
+    <div class="container" style="margin-top: 20%;">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+            <p class="col-md-4 mb-0 text-muted">&copy;For 2022 Summer Training created by saurav.</p>
+
+
+
+        </footer>
+    </div>
+</body>
+
+</html>
