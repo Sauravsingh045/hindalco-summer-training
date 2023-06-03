@@ -1,6 +1,8 @@
 <!doctype html>
 
 <head>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
     <style>
         /* CSS comes here */
         body {
@@ -29,16 +31,17 @@
 
 <body>
     <h3>QR Code Generator</h3>
-    <div><input id="qr-text" type="text" placeholder="Enter your Name & E.Code to generate QR code" /></div>
-    <br />
-    <div>
-        <button class="qr-btn" onclick="generateQRCode()">Create QR Code</button>
-    </div>
+    <form action="" id="contactForm">
+        <div><input id="qr-text" type="text" placeholder="Enter your Name & E.Code to generate QR code" /></div>
+        <br />
+        <div>
+            <button id="submit" type="submit" onclick="generateQRCode()">Create QR Code</button>
+        </div>
+    </form>
     <br />
     <p id="qr-result">This is deault QR code:</p>
     <canvas id="qr-code"></canvas>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
     <script>
         /* JS comes here */
         var qr;
@@ -60,7 +63,15 @@
                 value: qrtext
             });
         }
+
+
+        <!--datbase-->
+
+
+
     </script>
+
+
     <br>
     <hr>
     <button onclick="window.print()">Print this page</button>
