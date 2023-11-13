@@ -38,50 +38,31 @@
         .bg-image {
             /* Full height */
             height: 50%;
-
             /* Center and scale the image nicely */
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
         }
 
-        /* Images used */
-        .img1 {
-            background-image: url("/images/hh.jpg");
+        .bag2 {
+            position: relative;
+            overflow: hidden;
         }
 
-        .img2 {
-            background-image: url("/images/moving.jpg");
+        .bag2 img {
+            width: 100%;
+            height: auto;
+            filter: brightness(50%);
         }
 
-        .img3 {
-            background-image: url("/images/hh.jpg");
-        }
-
-        .img4 {
-            background-image: url("/images/moving.jpg");
-        }
-
-        .img5 {
-            background-image: url("/images/hh.jpg");
-            background-position: center;
-            background-size: cover;
-
-        }
-
-
-        /* Position text in the middle of the page/image */
         .bg-text {
-            background-color: rgb(0, 0, 0);
-            /* Fallback color */
-            background-color: rgba(0, 0, 0, 0.4);
-            /* Black w/opacity/see-through */
+            background-color: rgba(0, 0, 0, 0.6);
             color: white;
             font-weight: bold;
             font-size: 40px;
             border: 10px solid #f1f1f1;
-            position: fixed;
-            top: 60%;
+            position: absolute;
+            top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
             z-index: 2;
@@ -89,8 +70,51 @@
             padding: 20px;
             text-align: center;
         }
+
+        /* Updated Navbar styles */
+        #navigation {
+            background-color: #222;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        #navigation img {
+            max-height: 40px;
+        }
+
+        #navigation a {
+            color: white !important;
+        }
+
+        #navigation a:hover {
+            color: #f1f1f1 !important;
+        }
+
+        /* Updated Footer styles */
+        footer {
+            background-color: #393E46;
+            height: 3em;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer div {
+            color: #f1f1f1;
+            padding: 0.5em;
+        }
+
+        footer a {
+            color: #f1f1f1;
+        }
+
+        footer a:hover {
+            color: #eeeeee;
+        }
     </style>
-    <title>Document</title>
+    <title>Your Website Title</title>
 </head>
 
 <body>
@@ -120,36 +144,36 @@
             </ul>
         </div>
     </nav>
+
     <video autoplay muted loop>
         <source src="images\dots_-_120172 (540p).mp4" type="video/mp4" />
     </video>
+
     <div class="bg-image img1">
         <marquee behavior="" direction="left">
-            <h1>
-                India’s first aluminium
-                freight rake developed by Hindalco</h1>
+            <h1>India’s first aluminium freight rake developed by Hindalco</h1>
         </marquee>
     </div>
 
-    <div class="bg-image img2"> </div>
-    <div class="bg-image img3"></div>
-    <div class="bg-image img4"></div>
-    <div class="bg-image img5"></div>
+    <div class="bag2">
+        <img src="https://images.unsplash.com/photo-1630568002650-3ee79302fda5?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="" srcset="">
+        <img src="/images/design.png" alt="">
+    </div>
 
+    <div class="bg-text">
+        <button style="background-color: rgb(205, 244, 244);">
+            <a href="/pages/singinsignup.html" style="text-decoration: none; color: black;">Mark your attendance</a>
+        </button>
+    </div>
 
-    <div class="bg-text"><button style="background-color: rgb(205, 244, 244);"><a href="singinsignup.html"
-                style="text-decoration: none;">Mark
-                your
-                attendance</a></button></div>
-
-
-
-    <footer style="background-color: #393E46;height:1.5cm;">
+    <footer>
         <div class="row align-items-center">
-            <div class="text-center" style="color: #f1f1f1;">
+            <div class="text-center">
                 Copyright &copy; Summer Training @Hindalco Industries Ltd | saurav singh | <a
                     href="https://www.linkedin.com/in/saurav-singh-550616204/">LINKEDIN</a>
             </div>
+        </div>
     </footer>
 </body>
 
